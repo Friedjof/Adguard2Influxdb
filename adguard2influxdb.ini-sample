@@ -1,0 +1,18 @@
+[adguard]
+host = ip
+username = username
+password = password
+port = 443
+tls = true
+# interval to request data in seconds
+interval = 10
+
+[influxdb]
+host = ip
+username = username
+password = password
+port = 8086
+database = datenbank
+measurement_name = measurement
+ssl = false
+verify_ssl = false

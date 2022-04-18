@@ -1,0 +1,2 @@
+adguardhome==0.5.1
+influxdb

@@ -140,7 +140,7 @@ async def main():
             configuration: configparser = read_config(
                 filename=os.path.join(
                     os.path.dirname(__file__),
-                    "./config/configuration.ini"
+                    "configuration.ini"
                 )
             )
 
@@ -230,14 +230,9 @@ async def main():
 
 if __name__ == "__main__":
     logging.basicConfig(
-        filename=os.path.join(
-            os.path.dirname(__file__),
-            'adguard2influxdb.log'
-        ),
-        filemode='a',
         format='%(asctime)s - %(name)s - '
                '%(levelname)s - %(message)s',
-        level=logging.WARNING
+        level=logging.INFO
     )
 
     logging.debug("Start loop")
