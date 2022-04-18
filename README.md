@@ -6,7 +6,7 @@ It is equal capable as adguardhome and directly writing to influxdb.
 # Requirements
 * python3.6 or newer
 * influxdb
-* adguardhome >= 0.5.1
+* adguardhome >= 0.4.2
 
 # Setup
 * here we assume we install in ```/opt```
@@ -84,7 +84,7 @@ docker run --name=influxdb -d -p 8086:8086 influxdb
 * set influxdb host in `adguard2influxdb.ini` to `influxdb`
 * run docker container
 ```
-docker run --link influxdb -d -v /PATH/TO/my-adguard2influxdb.ini:/app/adguard2influxdb.ini --name adguard2influxdb adguard2influxdb
+docker run --link influxdb -d -v $PWD/configuration.ini:/app/configuration.ini --name adguard2influxdb adguard2influxdb
 ```
 
 ## Upgrading
@@ -94,6 +94,8 @@ If you upgrade from a version < 0.3 make sure to perform following steps
 * use the updated config and add the credentials and addresses from your old config
 
 # Grafana
+
+**_[A dashboard for Grafana will follow...]_**
 
 Use ```grafana_dashboard_adguard.json``` to import this dashboard.
 

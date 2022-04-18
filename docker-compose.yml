@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  fritzinfluxdb:
+  adguard2influxdb:
       build:
           context: .
           dockerfile: Dockerfile
