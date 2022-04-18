@@ -9,4 +9,4 @@ services:
       network_mode: host
       restart: unless-stopped
       volumes:
-        - ./my-adguard2influxdb.ini:/app/adguard2influxdb.ini
+        - ./configuration.ini:/app/configuration.ini
