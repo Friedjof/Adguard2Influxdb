@@ -64,12 +64,19 @@ def read_config(filename: str) -> configparser:
     """
 
     logging.info("Read configuration...")
+    alt_file: str = os.path.join(
+        os.path.dirname(__file__),
+        "./configuration.ini"
+    )
     config = None
 
     # check if config file exists
     if not os.path.isfile(filename):
-        logging.error(f'Config file "{filename}" not found')
-        exit(1)
+        if not os.path.isfile(alt_file):
+            logging.error(f'Config file "{filename}" not found')
+            exit(1)
+        else:
+            filename = alt_file
 
     # check if config file is readable
     if not os.access(filename, os.R_OK):

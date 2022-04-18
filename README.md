@@ -57,7 +57,7 @@ systemctl enable adguard2influxdb
 
 ## Run with Docker
 ```
-git clone <this_repo_url>
+git clone https://github.com/Friedjof/adguard2influxdb.git
 cd fritzinfluxdb
 ```
 
