@@ -1,0 +1,20 @@
+[Unit]
+Description=Adguard to InfluxDB daemon
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=nobody
+Group=nogroup
+WorkingDirectory=/opt/adguard2influxdb
+ExecStart=/opt/adguard2influxdb/.venv/bin/python /opt/adguard2influxdb/adguard2influxdb.py -d
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=adguard2influxdb
+RemainAfterExit=no
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

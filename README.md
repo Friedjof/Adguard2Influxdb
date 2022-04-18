@@ -35,6 +35,7 @@ pip3 install -r requirements.txt
 
 * modify your configuration and test it
 ```
+chmod 755 ./adguard2influxdb.py
 ./adguard2influxdb.py
 ```
 
