@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Friedjof Noweck
 # 2022-04-17 So
 # Quellen:
@@ -140,7 +141,7 @@ async def main():
             configuration: configparser = read_config(
                 filename=os.path.join(
                     os.path.dirname(__file__),
-                    "configuration.ini"
+                    "my-configuration.ini"
                 )
             )
 
