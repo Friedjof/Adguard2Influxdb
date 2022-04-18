@@ -1,2 +1,2 @@
-adguardhome==0.5.1
+adguardhome==0.4.2
 influxdb

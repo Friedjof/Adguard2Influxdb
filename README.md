@@ -58,7 +58,7 @@ systemctl enable adguard2influxdb
 ## Run with Docker
 ```
 git clone https://github.com/Friedjof/adguard2influxdb.git
-cd fritzinfluxdb
+cd adguard2influxdb
 ```
 
 Copy the config from the [example](adguard2influxdb.ini-sample) to ```my-adguard2influxdb.ini``` and edit
@@ -67,7 +67,7 @@ the settings.
 Now you should be able to build and run the image with following commands
 ```
 docker build -t adguard2influxdb .
-docker run -d -v /PATH/TO/my-adguard2influxdb.ini:/app/adguard2influxdb.ini --name adguard2influxdb adguard2influxdb
+docker run -d -v $PWD/configuration.ini:/app/configuration.ini --name adguard2influxdb adguard2influxdb
 ```
 
 You can alternatively use the provided [docker-compose.yml](docker-compose.yml):
