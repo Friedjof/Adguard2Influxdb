@@ -22,9 +22,9 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 2,
   "id": 17,
-  "iteration": 1650377052915,
+  "iteration": 1650394426342,
   "links": [],
-  "liveNow": false,
+  "liveNow": true,
   "panels": [
     {
       "datasource": {
@@ -104,15 +104,45 @@
               },
               {
                 "id": "custom.fillOpacity",
-                "value": 22
+                "value": 30
               },
               {
                 "id": "custom.lineWidth",
-                "value": 2
+                "value": 3
               },
               {
                 "id": "custom.fillBelowTo",
                 "value": "Blocked DNS requests"
+              },
+              {
+                "id": "custom.gradientMode",
+                "value": "none"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Blocked DNS requests"
+            },
+            "properties": [
+              {
+                "id": "custom.lineStyle",
+                "value": {
+                  "dash": [
+                    1,
+                    1
+                  ],
+                  "fill": "dot"
+                }
+              },
+              {
+                "id": "custom.drawStyle",
+                "value": "line"
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 3
               }
             ]
           }
@@ -1179,221 +1209,205 @@
       "type": "stat"
     },
     {
+      "aliasColors": {
+        "Blocked DNS Queries": "semi-dark-red",
+        "DNS Queries": "dark-green",
+        "Download": "#1f78c1",
+        "Upload": "#e24d42",
+        "fritzbox_value.non_negative_derivative": "#ba43a9",
+        "fritzbox_value.non_negative_difference": "#e24d42"
+      },
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
       "datasource": {
         "type": "influxdb",
-        "uid": "${database}"
+        "uid": "Kfb-xEaGk"
       },
       "fieldConfig": {
         "defaults": {
-          "color": {
-            "mode": "continuous-RdYlGr",
-            "seriesBy": "last"
-          },
-          "custom": {
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "drawStyle": "bars",
-            "fillOpacity": 100,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "lineInterpolation": "smooth",
-            "lineStyle": {
-              "fill": "solid"
-            },
-            "lineWidth": 0,
-            "pointSize": 10,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "spanNulls": true,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
+          "links": []
         },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "adguard.mean"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "dark-green",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Blocked requests"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "semi-dark-red",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "DNS responses"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "dark-green",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          }
-        ]
+        "overrides": []
       },
+      "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 9,
         "w": 12,
         "x": 0,
         "y": 18
       },
-      "id": 20,
-      "interval": "1d",
-      "options": {
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "bottom"
-        },
-        "tooltip": {
-          "mode": "single",
-          "sort": "none"
-        }
+      "hiddenSeries": false,
+      "id": 32,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": false
       },
+      "lines": false,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "8.4.1",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
       "targets": [
         {
-          "alias": "DNS responses",
+          "alias": "DNS Queries",
           "datasource": {
             "type": "influxdb",
-            "uid": "${database}"
+            "uid": "Kfb-xEaGk"
           },
+          "dsType": "influxdb",
           "groupBy": [
             {
               "params": [
-                "$__interval"
+                "24h"
               ],
               "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
             }
           ],
           "hide": false,
-          "measurement": "adguard",
+          "measurement": "fritzbox_value",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT non_negative_difference(last(cumulative_sum)) FROM (\nSELECT cumulative_sum(non_negative_difference(last(\"dns queries\"))) FROM \"$measurement\" WHERE $timeFilter GROUP BY time($__interval)\n) WHERE $timeFilter GROUP BY time($__interval) tz('Europe/Berlin')",
+          "query": "SELECT non_negative_difference(last(cumulative_sum)) FROM (\nSELECT cumulative_sum(non_negative_difference(last(\"dns queries\"))) FROM \"adguard\" WHERE $timeFilter GROUP BY time($__interval)\n) WHERE $timeFilter GROUP BY time(1d) tz('Europe/Berlin')",
           "rawQuery": true,
-          "refId": "A",
+          "refId": "DNS Queries",
           "resultFormat": "time_series",
           "select": [
             [
               {
                 "params": [
-                  "dns queries"
+                  "value"
                 ],
                 "type": "field"
               },
               {
                 "params": [],
-                "type": "mean"
+                "type": "max"
+              },
+              {
+                "params": [
+                  "10s"
+                ],
+                "type": "non_negative_derivative"
               }
             ]
           ],
-          "tags": []
+          "tags": [
+            {
+              "key": "type_instance",
+              "operator": "=",
+              "value": "totalbytesreceived"
+            }
+          ],
+          "target": ""
         },
         {
+          "alias": "Blocked DNS Queries",
           "datasource": {
             "type": "influxdb",
-            "uid": "${database}"
+            "uid": "Kfb-xEaGk"
           },
+          "dsType": "influxdb",
           "groupBy": [
             {
               "params": [
-                "$__interval"
+                "24h"
               ],
               "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
             }
           ],
           "hide": false,
-          "measurement": "adguard",
+          "measurement": "fritzbox_value",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT non_negative_difference(last(cumulative_sum)) FROM (\nSELECT cumulative_sum(non_negative_difference(last(\"blocked_filtering\"))) FROM \"$measurement\" WHERE $timeFilter GROUP BY time($__interval)\n) WHERE $timeFilter GROUP BY time($__interval) tz('Europe/Berlin')",
+          "query": "SELECT non_negative_difference(last(cumulative_sum)) FROM (\nSELECT cumulative_sum(non_negative_difference(last(\"blocked_filtering\"))) FROM \"adguard\" WHERE $timeFilter GROUP BY time($__interval)\n) WHERE $timeFilter GROUP BY time(1d) tz('Europe/Berlin')",
           "rawQuery": true,
-          "refId": "B",
+          "refId": "Blocked DNS Queries",
           "resultFormat": "time_series",
           "select": [
             [
               {
                 "params": [
-                  "period"
+                  "value"
                 ],
                 "type": "field"
               },
               {
                 "params": [],
-                "type": "mean"
+                "type": "max"
+              },
+              {
+                "params": [
+                  "10s"
+                ],
+                "type": "non_negative_derivative"
               }
             ]
           ],
-          "tags": []
+          "tags": [
+            {
+              "key": "type_instance",
+              "operator": "=",
+              "value": "totalbytesreceived"
+            }
+          ],
+          "target": ""
         }
       ],
+      "thresholds": [],
       "timeFrom": "7d",
-      "title": "Daily DNS Queries",
-      "type": "timeseries"
+      "timeRegions": [],
+      "title": "Daily Traffic",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:68",
+          "format": "none",
+          "label": "",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:69",
+          "format": "decbytes",
+          "logBase": 1,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
     },
     {
       "datasource": {
@@ -1720,7 +1734,7 @@
     "list": [
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "telegraf RPi InfluxDB",
           "value": "telegraf RPi InfluxDB"
         },
@@ -1749,7 +1763,7 @@
     ]
   },
   "time": {
-    "from": "now-12h",
+    "from": "now-24h",
     "to": "now"
   },
   "timepicker": {
@@ -1770,6 +1784,6 @@
   "timezone": "",
   "title": "Adguard Status",
   "uid": "wbl72687k",
-  "version": 25,
+  "version": 32,
   "weekStart": ""
 }
