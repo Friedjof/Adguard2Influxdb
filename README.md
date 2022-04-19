@@ -95,11 +95,9 @@ If you upgrade from a version < 0.3 make sure to perform following steps
 
 # Grafana
 
-**_[A dashboard for Grafana will follow...]_**
-
 Use ```grafana_dashboard_adguard.json``` to import this dashboard.
 
-![Grafan Dashboard](grafana_dashboard.jpg)
+![Grafan Dashboard](grafana-dashboard.png)
 
 # License
 >You can check out the full license [here](LICENSE.txt)
