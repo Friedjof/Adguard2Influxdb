@@ -22,7 +22,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 2,
   "id": 17,
-  "iteration": 1650394426342,
+  "iteration": 1650562897870,
   "links": [],
   "liveNow": true,
   "panels": [
@@ -74,8 +74,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           }
@@ -277,8 +276,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "dark-green",
-                "value": null
+                "color": "dark-green"
               },
               {
                 "color": "light-green",
@@ -384,8 +382,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "dark-green",
-                "value": null
+                "color": "dark-green"
               },
               {
                 "color": "#EAB839",
@@ -487,8 +484,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "text",
-                "value": null
+                "color": "text"
               }
             ]
           },
@@ -580,8 +576,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "text",
-                "value": null
+                "color": "text"
               }
             ]
           },
@@ -674,8 +669,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           },
@@ -780,8 +774,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -875,8 +868,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "semi-dark-red",
@@ -953,7 +945,7 @@
           "tags": []
         }
       ],
-      "timeFrom": "1d",
+      "timeFrom": "now/d",
       "title": "Last 24h Blocked DNS requests",
       "type": "stat"
     },
@@ -973,8 +965,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           }
@@ -1047,7 +1038,7 @@
           "tags": []
         }
       ],
-      "timeFrom": "1d",
+      "timeFrom": "now/d",
       "title": "Last 24h DNS requests",
       "type": "stat"
     },
@@ -1067,8 +1058,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           },
@@ -1162,8 +1152,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               }
             ]
           }
@@ -1222,7 +1211,7 @@
       "dashes": false,
       "datasource": {
         "type": "influxdb",
-        "uid": "Kfb-xEaGk"
+        "uid": "${database}"
       },
       "fieldConfig": {
         "defaults": {
@@ -1240,6 +1229,7 @@
       },
       "hiddenSeries": false,
       "id": 32,
+      "interval": "10s",
       "legend": {
         "alignAsTable": false,
         "avg": false,
@@ -1274,7 +1264,7 @@
           "alias": "DNS Queries",
           "datasource": {
             "type": "influxdb",
-            "uid": "Kfb-xEaGk"
+            "uid": "${database}"
           },
           "dsType": "influxdb",
           "groupBy": [
@@ -1326,7 +1316,7 @@
           "alias": "Blocked DNS Queries",
           "datasource": {
             "type": "influxdb",
-            "uid": "Kfb-xEaGk"
+            "uid": "${database}"
           },
           "dsType": "influxdb",
           "groupBy": [
@@ -1456,8 +1446,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1646,8 +1635,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1735,8 +1723,8 @@
       {
         "current": {
           "selected": false,
-          "text": "telegraf RPi InfluxDB",
-          "value": "telegraf RPi InfluxDB"
+          "text": "iot-server",
+          "value": "iot-server"
         },
         "hide": 0,
         "includeAll": false,
@@ -1784,6 +1772,6 @@
   "timezone": "",
   "title": "Adguard Status",
   "uid": "wbl72687k",
-  "version": 32,
+  "version": 39,
   "weekStart": ""
 }
