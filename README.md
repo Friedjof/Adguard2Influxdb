@@ -3,6 +3,12 @@
 Adguard to InfluxDb is a tiny daemon written in python to fetch data from the Adguard DNS and writes it to influxdb.
 It is equal capable as adguardhome and directly writing to influxdb.
 
+# Grafana
+
+Use ```grafana_dashboard_adguard.json``` to import this dashboard.
+
+![Grafan Dashboard](grafana-dashboard.png)
+
 # Requirements
 * python3.6 or newer
 * influxdb
@@ -92,12 +98,6 @@ If you upgrade from a version < 0.3 make sure to perform following steps
 
 * update your virtual env `pip3 install -r requirements.txt`
 * use the updated config and add the credentials and addresses from your old config
-
-# Grafana
-
-Use ```grafana_dashboard_adguard.json``` to import this dashboard.
-
-![Grafan Dashboard](grafana-dashboard.png)
 
 # License
 >You can check out the full license [here](LICENSE.txt)
