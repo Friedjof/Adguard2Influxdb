@@ -1,6 +1,6 @@
 # adguard2influxdb
 
-Adguard to InfluxDb is a tiny daemon written in python to fetch data from the Adguard DNS and writes it to influxdb.
+Adguard to InfluxDB is a tiny daemon written in python to fetch data from the Adguard DNS and writes it to influxdb.
 It is equal capable as adguardhome and directly writing to influxdb.
 
 # Grafana
